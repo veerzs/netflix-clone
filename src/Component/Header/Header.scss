@@ -1,0 +1,10 @@
+.header{
+
+>svg{
+  font-size: 2rem;
+  cursor: pointer;
+  &:hover{
+    color: red;
+  }
+}
+}

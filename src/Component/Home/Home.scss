@@ -1,0 +1,106 @@
+$bg-color:#000;
+.banner{
+  height: 500px;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: $bg-color;
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &::after{
+    top: 0;
+    left: 0;
+    content: "";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: $bg-color;
+    opacity: 0.4;
+  }
+  >h1,p{
+    color: white;
+    font-size: 4rem;
+    width: 50%;
+    z-index: 10;
+  }
+  >p{
+    font-weight: 100;
+    word-spacing: 3px;
+    width: 40%;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+  }
+  > div{
+    display: flex;
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    z-index: 10;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 1rem;
+    padding: 2rem;
+    color:lightblue;
+    width: 150px;
+    // background-color: transparent;
+    box-shadow: 2px 2px rgb(116, 115, 115);
+    transition: transform 0.5s;
+    &:hover{
+      transform: translateY(-8px) scale(1.05);
+    }
+    &:nth-child(even){
+      background-color: rgb(155, 153, 153);
+      cursor: pointer;
+    }
+    &:nth-child(odd){
+      background-color: rgb(59, 59, 59);
+      cursor: pointer;
+
+    }
+
+    >svg{
+      color: #995353 !important;
+      font-size:1.5rem ;
+    }
+  }
+
+  }
+}
+.row { 
+  background-color: $bg-color;
+  padding: 1rem;
+   
+
+  > div{
+    display:flex;
+    scrollbar-color: $bg-color;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  >h2{
+    margin: 0.3rem;
+    font-weight: 400;
+  }
+ 
+}
+
+.card{
+  width: 200px;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+  &:hover{
+    transform: translateY(-8px) scale(1.05);
+  }
+}
